@@ -7,15 +7,15 @@
     <style>
         body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; background-color: #ffffff; }
         
-        /* Justerad Header - Knappen närmare logotypen */
+        /* Header - Kompakt layout */
         .site-header { padding: 20px; border-bottom: 1px solid #eee; background: white; }
-        .logo-wrap { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; max-width: 900px; margin: 0 auto; }
-        .logo-img { height: 60px; width: auto; } 
+        .logo-wrap { display: flex; align-items: center; justify-content: center; gap: 25px; flex-wrap: wrap; max-width: 950px; margin: 0 auto; }
+        .logo-img { height: 65px; width: auto; } 
         .logo-text-area { text-align: left; }
-        .logo-main { font-size: 1.8em; font-weight: bold; color: #1e115e; margin: 0; line-height: 1; }
-        .logo-sub { font-size: 0.9em; color: #666; margin: 0; }
+        .logo-main { font-size: 1.9em; font-weight: bold; color: #1e115e; margin: 0; line-height: 1; }
+        .logo-sub { font-size: 0.95em; color: #666; margin: 0; }
         
-        .cta-orange { background-color: #ff8c00; color: white; border: none; padding: 12px 20px; font-size: 0.85em; font-weight: bold; border-radius: 5px; cursor: pointer; text-transform: uppercase; transition: 0.3s; }
+        .cta-orange { background-color: #ff8c00; color: white; border: none; padding: 12px 22px; font-size: 0.85em; font-weight: bold; border-radius: 5px; cursor: pointer; text-transform: uppercase; transition: 0.3s; }
         .cta-orange:hover { background-color: #e67e00; transform: translateY(-2px); }
 
         .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
@@ -24,32 +24,55 @@
         h2 { color: #1e115e; font-size: 2.2em; margin-top: 0; line-height: 1.2; text-align: center; }
         .highlight { color: #ff8c00; }
 
+        /* NYHET: Ram runt pappersarbete-texten */
+        .paperwork-box { 
+            border: 2px dashed #1e115e; 
+            padding: 20px; 
+            text-align: center; 
+            margin: 30px 0; 
+            border-radius: 8px;
+            background-color: #f8f9ff;
+        }
+
         .benefits-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
         .benefit-item { background: #fdfdfd; padding: 15px; border-left: 4px solid #ff8c00; font-size: 0.95em; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
 
-        .support-section { display: flex; align-items: center; background: #1e115e; color: white; padding: 25px; border-radius: 8px; margin: 40px 0; gap: 20px; }
-        .support-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #ff8c00; }
-        .support-text h4 { margin: 0 0 10px 0; color: #ff8c00; font-size: 1.2em; }
+        /* JUSTERAD: Support-sektion utan rund beskärning */
+        .support-section { 
+            display: flex; 
+            align-items: flex-start; 
+            background: #1e115e; 
+            color: white; 
+            padding: 30px; 
+            border-radius: 8px; 
+            margin: 40px 0; 
+            gap: 25px; 
+        }
+        .support-img { 
+            width: 200px; /* Gjort bilden större */
+            height: auto; 
+            border-radius: 4px; /* Bara lätt rundade hörn */
+            border: 2px solid #ff8c00; 
+        }
+        .support-text h4 { margin: 0 0 10px 0; color: #ff8c00; font-size: 1.4em; }
 
         .comparison-table { width: 100%; border-collapse: collapse; margin: 30px 0; font-size: 0.9em; }
         .comparison-table th { background: #1e115e; color: white; padding: 12px; text-align: left; }
         .comparison-table td { padding: 12px; border-bottom: 1px solid #eee; }
         .our-way { background-color: #f0fff4; font-weight: bold; color: #2d6a4f; }
 
-        /* Formulär sist på sidan */
         .bottom-form-area { background: #f9f9f9; padding: 40px; border-radius: 8px; border: 2px solid #ff8c00; margin-top: 60px; }
         .form-group { margin-bottom: 20px; }
         label { display: block; font-weight: bold; margin-bottom: 8px; font-size: 0.9em; }
         input[type="text"], input[type="email"], input[type="tel"] { width: 100%; padding: 15px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 1em; }
-        
-        .sms-box { background: #eee; padding: 15px; border-radius: 4px; font-size: 11px; margin-top: 20px; line-height: 1.4; }
         
         footer { text-align: center; padding: 50px 20px; background: #f4f4f4; border-top: 1px solid #ddd; margin-top: 60px; }
         footer a { color: #1e115e; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 0.9em; }
 
         @media (max-width: 768px) {
             .benefits-grid { grid-template-columns: 1fr; }
-            .support-section { flex-direction: column; text-align: center; }
+            .support-section { flex-direction: column; align-items: center; text-align: center; }
+            .support-img { width: 100%; max-width: 250px; }
         }
     </style>
 </head>
@@ -62,7 +85,7 @@
                 <h1 class="logo-main">1LANDBUYERUSA.COM</h1>
                 <p class="logo-sub">Sell Your Land Fast — All Cash</p>
             </div>
-            <button class="cta-orange" onclick="document.getElementById('final-form').scrollIntoView({behavior: 'smooth'});">Get Cash Offer</button>
+            <button class="cta-orange" onclick="document.getElementById('offer-form').scrollIntoView({behavior: 'smooth'});">Get Cash Offer</button>
         </div>
     </header>
 
@@ -71,20 +94,32 @@
         
         <img src="lot.png.png" alt="Land Lot" class="property-img">
 
-        <p style="text-align: center;">We handle all the paperwork and cover the closing costs. There are no hidden fees or commissions.</p>
+        <div class="paperwork-box">
+            <p style="margin:0; font-weight: bold; font-size: 1.1em; color: #1e115e;">
+                We handle all the paperwork and cover the closing costs. There are no hidden fees or commissions, ensuring you get exactly what was offered at closing.
+            </p>
+        </div>
 
         <div class="benefits-grid">
             <div class="benefit-item">
-                <strong>Market Value:</strong> Offers are based on current market value and condition.
+                <strong>Fair Value:</strong> Offers are based on current market condition.
             </div>
             <div class="benefit-item">
-                <strong>No-Obligation:</strong> Get an all-cash offer within 24 hours with no pressure.
+                <strong>No-Obligation:</strong> Get your cash offer within 24 hours.
             </div>
             <div class="benefit-item">
-                <strong>Sell on Your Terms:</strong> Pick your own closing date and avoid realtor disruptions.
+                <strong>Fast Closing:</strong> We close when you are ready.
             </div>
             <div class="benefit-item">
-                <strong>Hassle-Free:</strong> We buy directly, eliminating the need for showings.
+                <strong>Buy As-Is:</strong> No clearing or maintenance needed.
+            </div>
+        </div>
+
+        <div class="support-section">
+            <img src="call.png.png" alt="Support Specialist" class="support-img">
+            <div class="support-text">
+                <h4>Talk to our Support Specialist</h4>
+                <p>Our team is available 24/7 to guide you through the process and collect your land details for an immediate offer evaluation. We are here to make your sale as smooth as possible.</p>
             </div>
         </div>
 
@@ -94,20 +129,12 @@
             </thead>
             <tbody>
                 <tr><td>Closing Costs</td><td class="our-way">We pay 100%</td><td>You pay 2-5%</td></tr>
-                <tr><td>Commissions</td><td class="our-way">0%</td><td>6% - 10%</td></tr>
-                <tr><td>Closing Speed</td><td class="our-way">Fast (Days)</td><td>Months</td></tr>
+                <tr><td>Commissions</td><td class="our-way">0% (Zero)</td><td>6% - 10%</td></tr>
+                <tr><td>Closing Speed</td><td class="our-way">Fast (7-14 Days)</td><td>Slow (Months)</td></tr>
             </tbody>
         </table>
 
-        <div class="support-section">
-            <img src="call.png.png" alt="Support Specialist" class="support-img">
-            <div class="support-text">
-                <h4>Talk to our Support Specialist</h4>
-                <p>Our team is available 24/7 to discuss your property details and goals.</p>
-            </div>
-        </div>
-
-        <div class="bottom-form-area" id="final-form">
+        <div class="bottom-form-area" id="offer-form">
             <h3 style="margin-top:0; color: #1e115e;">Start Your Cash Offer</h3>
             <form>
                 <div class="form-group">
@@ -126,10 +153,7 @@
                     <label>Phone Number</label>
                     <input type="tel" name="phone" placeholder="904-xxx-xxxx" required>
                 </div>
-                <div class="sms-box">
-                    <label><input type="checkbox" required> I agree to receive informational SMS messages. Text STOP to opt-out.</label>
-                </div>
-                <button type="submit" class="cta-orange" style="width:100%; margin-top: 20px; padding: 15px;">Get My Land Offer Now</button>
+                <button type="submit" class="cta-orange" style="width:100%; margin-top: 20px; padding: 18px; font-size: 1.1em;">Get My Land Offer Now</button>
             </form>
         </div>
     </div>
