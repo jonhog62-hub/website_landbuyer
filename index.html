@@ -37,7 +37,7 @@
         .benefits-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
         .benefit-item { background: #fdfdfd; padding: 15px; border-left: 4px solid #ff8c00; font-size: 0.95em; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
 
-        /* Support-sektion - 50% STÖRRE BILD OCH TELEFONNUMMER */
+        /* Support-sektion */
         .support-section { 
             display: flex; 
             align-items: center; 
@@ -49,7 +49,7 @@
             gap: 30px; 
         }
         .support-img { 
-            width: 300px; /* Ökad från 200px till 300px (50% större) */
+            width: 300px; 
             height: auto; 
             border-radius: 8px; 
             border: 3px solid #ff8c00; 
@@ -63,21 +63,18 @@
         .comparison-table td { padding: 12px; border-bottom: 1px solid #eee; }
         .our-way { background-color: #f0fff4; font-weight: bold; color: #2d6a4f; }
 
-        /* Formulär med A2P-texten återställd */
-        .bottom-form-area { background: #f9f9f9; padding: 40px; border-radius: 8px; border: 2px solid #ff8c00; margin-top: 60px; }
-        .form-group { margin-bottom: 20px; }
-        label { display: block; font-weight: bold; margin-bottom: 8px; font-size: 0.95em; }
-        input[type="text"], input[type="email"], input[type="tel"] { width: 100%; padding: 15px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 1em; }
-        
-        /* A2P SMS TEXT BOX */
-        .sms-policy-box { 
-            background: #eee; 
-            padding: 15px; 
-            border-radius: 4px; 
-            font-size: 12px; 
-            margin-top: 20px; 
-            line-height: 1.4; 
-            color: #444;
+        /* Google Forms Behållare */
+        .form-container { 
+            background: #f9f9f9; 
+            padding: 20px; 
+            border-radius: 8px; 
+            border: 2px solid #ff8c00; 
+            margin-top: 60px;
+            text-align: center;
+        }
+        iframe {
+            max-width: 100%;
+            border: none;
         }
         
         footer { text-align: center; padding: 50px 20px; background: #f4f4f4; border-top: 1px solid #ddd; margin-top: 60px; }
@@ -141,39 +138,11 @@
             </tbody>
         </table>
 
-        <div class="bottom-form-area" id="offer-form">
-            <h3 style="margin-top:0; color: #1e115e;">Start Your Cash Offer</h3>
-            <form>
-                <div class="form-group">
-                    <label>Land Address / County & State</label>
-                    <input type="text" name="address" placeholder="Street or County, State" required>
-                </div>
-                <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label>Email Address</label>
-                    <input type="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label>Phone Number</label>
-                    <input type="tel" name="phone" placeholder="904-xxx-xxxx" required>
-                </div>
-
-                <div class="sms-policy-box">
-                    <label style="display: flex; align-items: flex-start; cursor: pointer;">
-                        <input type="checkbox" style="margin-top: 4px; margin-right: 10px;" required>
-                        <span>
-                            I agree to receive <strong>informational SMS messages regarding land offers</strong> from Online4com LLC. 
-                            Msg frequency varies. Msg & data rates may apply. 
-                            Text <strong>HELP</strong> for help or <strong>STOP</strong> to opt-out.
-                        </span>
-                    </label>
-                </div>
-
-                <button type="submit" class="cta-orange" style="width:100%; margin-top: 25px; padding: 20px; font-size: 1.1em;">Get My Land Offer Now</button>
-            </form>
+        <div class="form-container" id="offer-form">
+            <h3 style="margin-top:0; color: #1e115e; font-size: 1.8em;">Start Your Cash Offer</h3>
+            <p style="margin-bottom: 25px;">Please fill out the secure form below to submit your property details.</p>
+            
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeygXVeva6UnFS5wMq-_fKLmRUKBxOYQAjAEJ2ydOOKu8FZGQ/viewform?embedded=true" width="100%" height="1101" frameborder="0" marginheight="0" marginwidth="0">Läser in …</iframe>
         </div>
     </div>
 
