@@ -3,99 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1LANDBUYERUSA.COM | Sell your Land Fast - All Cash</title>
+    <title>1LANDBUYERUSA.COM | Sell Your Land Fast - 100% Cash</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; background-color: #ffffff; }
         
-        /* Den lila headern från din bild */
-        .header-bg { background-color: #1e115e; color: white; padding: 40px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-        .logo-box { background: white; padding: 10px; margin-bottom: 20px; border-radius: 4px; max-width: 250px; }
-        .logo-box img { width: 100%; height: auto; display: block; }
+        /* Header - Lila sektion */
+        .header-bg { background-color: #1e115e; color: white; padding: 40px 20px; text-align: center; }
+        .logo-container { margin-bottom: 20px; }
+        .logo-text { font-size: 2.5em; font-weight: bold; letter-spacing: 2px; margin: 0; }
+        .logo-accent { color: #ffbc0d; }
+        .subtitle { font-size: 1.4em; margin-top: 5px; opacity: 0.9; }
         
-        h1 { font-size: 3em; margin: 0; letter-spacing: 2px; }
-        .subtitle { font-size: 1.5em; margin-top: 10px; font-weight: normal; }
-        
-        /* Den orangea knappen */
-        .cta-button { background-color: #ff8c00; color: white; border: none; padding: 15px 40px; font-size: 1.2em; font-weight: bold; border-radius: 4px; cursor: pointer; margin-top: 25px; text-transform: uppercase; }
+        /* CTA Knapp */
+        .cta-orange { background-color: #ff8c00; color: white; border: none; padding: 18px 40px; font-size: 1.1em; font-weight: bold; border-radius: 5px; cursor: pointer; text-transform: uppercase; margin-top: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
 
-        /* Innehållssektion */
-        .main-container { max-width: 1000px; margin: 40px auto; padding: 0 20px; display: flex; gap: 40px; flex-wrap: wrap; }
-        .content-left { flex: 1; min-width: 300px; }
-        .content-right { flex: 1; min-width: 300px; background: #f9f9f9; padding: 30px; border-radius: 8px; border: 1px solid #ddd; }
-        
-        .land-image { width: 100%; border-radius: 4px; margin-bottom: 20px; }
-        .contact-info-box { background-color: #00bcd4; color: white; padding: 15px; display: flex; align-items: center; gap: 15px; margin-top: 20px; border-radius: 4px; }
-        .phone-number { font-size: 2em; font-weight: bold; color: #1e115e; margin-top: 10px; display: block; }
+        /* Main Content */
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        .hero-flex { display: flex; gap: 40px; flex-wrap: wrap; align-items: flex-start; }
+        .content-main { flex: 1.5; min-width: 300px; }
+        .sidebar-form { flex: 1; min-width: 300px; background: #f9f9f9; padding: 30px; border-radius: 8px; border: 1px solid #ddd; }
 
-        /* Formulär-styling */
+        /* Info sektioner */
+        h2 { color: #1e115e; font-size: 2em; border-left: 5px solid #28a745; padding-left: 15px; }
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
+        .info-card { border: 2px solid #ff8c00; border-radius: 8px; padding: 20px; }
+        .info-card h3 { margin-top: 0; color: #1e115e; }
+
+        /* Tabell */
+        .comparison-table { width: 100%; border-collapse: collapse; margin: 40px 0; font-size: 0.95em; }
+        .comparison-table th { background: #1e115e; color: white; padding: 15px; text-align: left; }
+        .comparison-table td { padding: 12px; border-bottom: 1px solid #eee; }
+        .our-way { background-color: #f0fff4; font-weight: bold; color: #2d6a4f; }
+
+        /* Formulär */
         .form-group { margin-bottom: 15px; }
         label { display: block; font-weight: bold; margin-bottom: 5px; }
-        input[type="text"], input[type="email"], input[type="tel"] { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-        .sms-notice { font-size: 13px; color: #666; background: #eee; padding: 15px; border-radius: 4px; margin-top: 15px; }
+        input[type="text"], input[type="email"], input[type="tel"] { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        
+        /* SMS Consent - Godkänd version */
+        .sms-box { background: #eee; padding: 15px; border-radius: 4px; font-size: 13px; margin-top: 20px; border: 1px solid #ccc; }
+        
+        /* Footer */
+        footer { text-align: center; padding: 60px 20px; background: #f4f4f4; border-top: 1px solid #ddd; }
+        footer a { color: #1e115e; text-decoration: none; font-weight: bold; margin: 0 10px; }
 
-        footer { text-align: center; padding: 40px; background: #f1f1f1; margin-top: 40px; font-size: 14px; }
-        footer a { color: #1e115e; text-decoration: none; margin: 0 10px; font-weight: bold; }
+        @media (max-width: 768px) { .info-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
     <div class="header-bg">
-        <div class="logo-box">
-            <img src="https://via.placeholder.com/250x150?text=1+LAND+BUYER+USA" alt="1 Land Buyer USA Logo">
+        <div class="logo-container">
+            <h1 class="logo-text"><span class="logo-accent">1</span>LANDBUYERUSA.COM</h1>
+            <div class="subtitle">Sell Your Land Fast - All Cash</div>
         </div>
-        <h1>1LANDBUYERUSA.COM</h1>
-        <div class="subtitle">Sell your Land Fast - All Cash</div>
-        <button class="cta-button" onclick="document.getElementById('form-top').scrollIntoView();">Get My Cash Offer</button>
+        <button class="cta-orange" onclick="document.getElementById('form-section').scrollIntoView({behavior: 'smooth'});">Get My Cash Offer Now</button>
     </div>
 
-    <div class="main-container">
-        <div class="content-left">
-            <img src="https://via.placeholder.com/500x300?text=Property+Image" alt="Land Plot" class="land-image">
-            <div style="padding: 10px 0;">
-                <div style="background: #00bcd4; color: white; padding: 10px 20px; display: inline-block; font-weight: bold; border-radius: 4px;">
-                    Talk with our Team Right Now!
+    <div class="container">
+        <div class="hero-flex">
+            <div class="content-main">
+                <h2>The Easiest Way To Sell Your Land</h2>
+                <p>We buy Florida land <strong>exactly as it is</strong>. We handle every detail and <strong>pay ALL closing costs!</strong></p>
+
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Inherited Land</h3>
+                        <p>Fast closing. We cover all legal transfer fees.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Tax Delinquency</h3>
+                        <p>We pay your back taxes and all closing costs.</p>
+                    </div>
                 </div>
-                <span class="phone-number">904 682 9292</span>
+
+                <h3>Why Choose Our Program?</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Our Way</th>
+                            <th>Traditional</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Closing Costs</td>
+                            <td class="our-way">We pay 100%</td>
+                            <td>You pay 2-5%</td>
+                        </tr>
+                        <tr>
+                            <td>Commissions</td>
+                            <td class="our-way">Zero Fees</td>
+                            <td>6% - 10% Fees</td>
+                        </tr>
+                        <tr>
+                            <td>Condition</td>
+                            <td class="our-way">Buy As-Is</td>
+                            <td>Must clear land</td>
+                        </tr>
+                        <tr>
+                            <td>Closing Speed</td>
+                            <td class="our-way">Fast (Days)</td>
+                            <td>Slow (Months)</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </div>
 
-        <div id="form-top" class="content-right">
-            <h3>Online4com LLC</h3>
-            <p>Fill out the form to get started</p>
-            <form>
-                <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label>Phone Number</label>
-                    <input type="tel" name="phone" placeholder="904-xxx-xxxx" required>
-                </div>
+            <div id="form-section" class="sidebar-form">
+                <h3 style="margin-top:0;">Online4com LLC</h3>
+                <p>Start your offer here:</p>
+                <form>
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" name="phone" placeholder="904-xxx-xxxx" required>
+                    </div>
 
-                <div class="sms-notice">
-                    <input type="checkbox" id="sms-check" required>
-                    <label style="display: inline; font-weight: normal;" for="sms-check">
-                        I agree to receive <strong>informational SMS messages regarding property offers and appointment reminders</strong> from Online4com LLC at the number provided. 
-                        Message frequency varies. Message and data rates may apply. 
-                        Text <strong>HELP</strong> for help or <strong>STOP</strong> to opt-out. 
-                        See our <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-and-conditions.html">Terms</a>.
-                    </label>
+                    <div class="sms-box">
+                        <label style="display: flex; align-items: flex-start; font-weight: normal;">
+                            <input type="checkbox" style="margin-top: 4px; margin-right: 10px;" required>
+                            <span>
+                                I agree to receive <strong>informational SMS messages regarding property offers and appointment reminders</strong> from Online4com LLC at the number provided. 
+                                Msg frequency varies. Msg & data rates may apply. 
+                                Text <strong>HELP</strong> for help or <strong>STOP</strong> to opt-out. 
+                                See <a href="privacy-policy.html">Privacy Policy</a> & <a href="terms-and-conditions.html">Terms</a>.
+                            </span>
+                        </label>
+                    </div>
+                    <button type="submit" class="cta-orange" style="width:100%; margin-top: 20px;">Get Offer</button>
+                </form>
+                
+                <div style="margin-top: 30px; text-align: center;">
+                    <p style="font-weight: bold; color: #00bcd4; margin-bottom: 5px;">Talk with our Team Right Now!</p>
+                    <span style="font-size: 1.8em; font-weight: bold; color: #1e115e;">904 682 9292</span>
                 </div>
-                <button type="submit" class="cta-button" style="width: 100%; margin-top: 15px;">Submit Request</button>
-            </form>
+            </div>
         </div>
     </div>
 
     <footer>
-        <div>
+        <div style="margin-bottom: 20px;">
             <a href="privacy-policy.html">Privacy Policy</a> | 
             <a href="terms-and-conditions.html">Terms and Conditions</a>
         </div>
         <p>&copy; 2026 Online4com LLC. All rights reserved.</p>
+        <p>1landbuyerusa.com - Providing fair land solutions since 2024.</p>
     </footer>
 
 </body>
