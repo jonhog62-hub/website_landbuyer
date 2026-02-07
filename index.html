@@ -7,7 +7,7 @@
     <style>
         body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; background-color: #ffffff; }
         
-        /* Header - Kompakt layout */
+        /* Header */
         .site-header { padding: 20px; border-bottom: 1px solid #eee; background: white; }
         .logo-wrap { display: flex; align-items: center; justify-content: center; gap: 25px; flex-wrap: wrap; max-width: 950px; margin: 0 auto; }
         .logo-img { height: 65px; width: auto; } 
@@ -18,13 +18,13 @@
         .cta-orange { background-color: #ff8c00; color: white; border: none; padding: 12px 22px; font-size: 0.85em; font-weight: bold; border-radius: 5px; cursor: pointer; text-transform: uppercase; transition: 0.3s; }
         .cta-orange:hover { background-color: #e67e00; transform: translateY(-2px); }
 
-        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        .container { max-width: 850px; margin: 0 auto; padding: 40px 20px; }
         .property-img { width: 100%; border-radius: 8px; margin-bottom: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         
         h2 { color: #1e115e; font-size: 2.2em; margin-top: 0; line-height: 1.2; text-align: center; }
         .highlight { color: #ff8c00; }
 
-        /* NYHET: Ram runt pappersarbete-texten */
+        /* Ram runt pappersarbete */
         .paperwork-box { 
             border: 2px dashed #1e115e; 
             padding: 20px; 
@@ -37,42 +37,56 @@
         .benefits-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
         .benefit-item { background: #fdfdfd; padding: 15px; border-left: 4px solid #ff8c00; font-size: 0.95em; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
 
-        /* JUSTERAD: Support-sektion utan rund beskärning */
+        /* Support-sektion - 50% STÖRRE BILD OCH TELEFONNUMMER */
         .support-section { 
             display: flex; 
-            align-items: flex-start; 
+            align-items: center; 
             background: #1e115e; 
             color: white; 
-            padding: 30px; 
+            padding: 35px; 
             border-radius: 8px; 
             margin: 40px 0; 
-            gap: 25px; 
+            gap: 30px; 
         }
         .support-img { 
-            width: 200px; /* Gjort bilden större */
+            width: 300px; /* Ökad från 200px till 300px (50% större) */
             height: auto; 
-            border-radius: 4px; /* Bara lätt rundade hörn */
-            border: 2px solid #ff8c00; 
+            border-radius: 8px; 
+            border: 3px solid #ff8c00; 
         }
-        .support-text h4 { margin: 0 0 10px 0; color: #ff8c00; font-size: 1.4em; }
+        .support-text h4 { margin: 0 0 5px 0; color: #ff8c00; font-size: 1.5em; }
+        .phone-link { font-size: 1.8em; color: #ffffff; text-decoration: none; font-weight: bold; display: block; margin: 10px 0; }
+        .phone-link:hover { color: #ff8c00; }
 
         .comparison-table { width: 100%; border-collapse: collapse; margin: 30px 0; font-size: 0.9em; }
         .comparison-table th { background: #1e115e; color: white; padding: 12px; text-align: left; }
         .comparison-table td { padding: 12px; border-bottom: 1px solid #eee; }
         .our-way { background-color: #f0fff4; font-weight: bold; color: #2d6a4f; }
 
+        /* Formulär med A2P-texten återställd */
         .bottom-form-area { background: #f9f9f9; padding: 40px; border-radius: 8px; border: 2px solid #ff8c00; margin-top: 60px; }
         .form-group { margin-bottom: 20px; }
-        label { display: block; font-weight: bold; margin-bottom: 8px; font-size: 0.9em; }
+        label { display: block; font-weight: bold; margin-bottom: 8px; font-size: 0.95em; }
         input[type="text"], input[type="email"], input[type="tel"] { width: 100%; padding: 15px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 1em; }
+        
+        /* A2P SMS TEXT BOX */
+        .sms-policy-box { 
+            background: #eee; 
+            padding: 15px; 
+            border-radius: 4px; 
+            font-size: 12px; 
+            margin-top: 20px; 
+            line-height: 1.4; 
+            color: #444;
+        }
         
         footer { text-align: center; padding: 50px 20px; background: #f4f4f4; border-top: 1px solid #ddd; margin-top: 60px; }
         footer a { color: #1e115e; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 0.9em; }
 
         @media (max-width: 768px) {
             .benefits-grid { grid-template-columns: 1fr; }
-            .support-section { flex-direction: column; align-items: center; text-align: center; }
-            .support-img { width: 100%; max-width: 250px; }
+            .support-section { flex-direction: column; text-align: center; }
+            .support-img { width: 100%; max-width: 350px; }
         }
     </style>
 </head>
@@ -101,25 +115,18 @@
         </div>
 
         <div class="benefits-grid">
-            <div class="benefit-item">
-                <strong>Fair Value:</strong> Offers are based on current market condition.
-            </div>
-            <div class="benefit-item">
-                <strong>No-Obligation:</strong> Get your cash offer within 24 hours.
-            </div>
-            <div class="benefit-item">
-                <strong>Fast Closing:</strong> We close when you are ready.
-            </div>
-            <div class="benefit-item">
-                <strong>Buy As-Is:</strong> No clearing or maintenance needed.
-            </div>
+            <div class="benefit-item"><strong>Fair Value:</strong> Based on market conditions.</div>
+            <div class="benefit-item"><strong>Fast Cash:</strong> Offer within 24 hours.</div>
+            <div class="benefit-item"><strong>Easy Closing:</strong> You pick the date.</div>
+            <div class="benefit-item"><strong>As-Is:</strong> No clearing needed.</div>
         </div>
 
         <div class="support-section">
             <img src="call.png.png" alt="Support Specialist" class="support-img">
             <div class="support-text">
                 <h4>Talk to our Support Specialist</h4>
-                <p>Our team is available 24/7 to guide you through the process and collect your land details for an immediate offer evaluation. We are here to make your sale as smooth as possible.</p>
+                <a href="tel:9046829292" class="phone-link">904-682-9292</a>
+                <p>Our team is available 24/7 to guide you through the process and collect your land details for an immediate evaluation. Give us a call today!</p>
             </div>
         </div>
 
@@ -130,7 +137,7 @@
             <tbody>
                 <tr><td>Closing Costs</td><td class="our-way">We pay 100%</td><td>You pay 2-5%</td></tr>
                 <tr><td>Commissions</td><td class="our-way">0% (Zero)</td><td>6% - 10%</td></tr>
-                <tr><td>Closing Speed</td><td class="our-way">Fast (7-14 Days)</td><td>Slow (Months)</td></tr>
+                <tr><td>Speed</td><td class="our-way">7-14 Days</td><td>6-12 Months</td></tr>
             </tbody>
         </table>
 
@@ -153,7 +160,19 @@
                     <label>Phone Number</label>
                     <input type="tel" name="phone" placeholder="904-xxx-xxxx" required>
                 </div>
-                <button type="submit" class="cta-orange" style="width:100%; margin-top: 20px; padding: 18px; font-size: 1.1em;">Get My Land Offer Now</button>
+
+                <div class="sms-policy-box">
+                    <label style="display: flex; align-items: flex-start; cursor: pointer;">
+                        <input type="checkbox" style="margin-top: 4px; margin-right: 10px;" required>
+                        <span>
+                            I agree to receive <strong>informational SMS messages regarding land offers</strong> from Online4com LLC. 
+                            Msg frequency varies. Msg & data rates may apply. 
+                            Text <strong>HELP</strong> for help or <strong>STOP</strong> to opt-out.
+                        </span>
+                    </label>
+                </div>
+
+                <button type="submit" class="cta-orange" style="width:100%; margin-top: 25px; padding: 20px; font-size: 1.1em;">Get My Land Offer Now</button>
             </form>
         </div>
     </div>
