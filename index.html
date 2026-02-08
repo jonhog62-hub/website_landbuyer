@@ -11,39 +11,36 @@
         .logo-img { height: 65px; width: auto; } 
         .logo-main { font-size: 1.9em; font-weight: bold; color: #1e115e; margin: 0; line-height: 1; }
         .logo-sub { font-size: 0.95em; color: #666; margin: 0; }
-        
         .cta-orange { background-color: #ff8c00; color: white; border: none; padding: 12px 22px; font-size: 0.85em; font-weight: bold; border-radius: 5px; cursor: pointer; text-transform: uppercase; transition: 0.3s; }
         .cta-orange:hover { background-color: #e67e00; transform: translateY(-2px); }
-
         .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-        
+        .property-img { width: 100%; border-radius: 8px; margin-bottom: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         h2 { color: #1e115e; font-size: 2.5em; text-align: center; margin-bottom: 10px; line-height: 1.2; }
         .highlight { color: #ff8c00; }
-        .intro-subtext { text-align: center; font-size: 1.3em; color: #555; margin-bottom: 40px; }
+        .intro-subtext { text-align: center; font-size: 1.3em; color: #555; margin-bottom: 40px; font-weight: bold; }
 
-        /* Text-baserad Benefits Grid */
+        /* Features Grid */
         .features-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 25px; margin: 50px 0; }
-        .feature-box { background: #fdfdfd; padding: 30px; border: 1px solid #eee; border-top: 5px solid #ff8c00; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .feature-box { background: #fdfdfd; padding: 30px; border: 1px solid #eee; border-top: 5px solid #ff8c00; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
         .feature-box h3 { color: #1e115e; font-size: 1.3em; margin-top: 0; }
         .feature-box p { font-size: 0.95em; color: #666; }
 
-        /* How it works - Text focus */
-        .how-it-works { background: #1e115e; color: white; padding: 50px 30px; border-radius: 12px; margin: 60px 0; }
+        /* How it works */
+        .how-it-works { background: #1e115e; color: white; padding: 50px 30px; border-radius: 12px; margin: 60px 0; text-align: center; }
         .how-it-works h2 { color: white; margin-bottom: 40px; }
-        .steps { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; }
-        .step { position: relative; }
-        .step-num { font-size: 3em; font-weight: bold; color: rgba(255, 140, 0, 0.3); position: absolute; top: -20px; left: 0; }
-        .step-content { position: relative; z-index: 1; }
+        .steps { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; text-align: left; }
         .step h4 { color: #ff8c00; font-size: 1.4em; margin-bottom: 10px; }
         .step p { font-size: 0.95em; line-height: 1.5; }
 
-        .comparison-table { width: 100%; border-collapse: collapse; margin: 50px 0; border: 1px solid #eee; }
+        /* Comparison & Support */
+        .comparison-table { width: 100%; border-collapse: collapse; margin: 50px 0; }
         .comparison-table th { background: #f8f9ff; color: #1e115e; padding: 20px; text-align: left; border-bottom: 2px solid #1e115e; }
         .comparison-table td { padding: 18px; border-bottom: 1px solid #eee; }
         .our-way { background-color: #f0fff4; font-weight: bold; color: #2d6a4f; }
 
-        .support-box { text-align: center; padding: 40px; background: #fff8f0; border-radius: 8px; border: 1px solid #ff8c00; margin: 40px 0; }
-        .phone-big { font-size: 2.2em; color: #1e115e; text-decoration: none; font-weight: bold; display: block; margin: 15px 0; }
+        .support-section { display: flex; align-items: center; background: #f9f9f9; padding: 35px; border-radius: 8px; margin: 40px 0; gap: 30px; border: 1px solid #ddd; }
+        .support-img { width: 300px; height: auto; border-radius: 8px; border: 3px solid #ff8c00; }
+        .phone-link { font-size: 1.8em; color: #1e115e; text-decoration: none; font-weight: bold; display: block; margin: 10px 0; }
 
         .bottom-form-area { background: #f9f9f9; padding: 45px; border-radius: 8px; border-bottom: 10px solid #ff8c00; margin-top: 60px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         .form-group { margin-bottom: 20px; }
@@ -55,8 +52,8 @@
         footer a { color: #1e115e; text-decoration: none; margin: 0 15px; font-weight: bold; }
 
         @media (max-width: 768px) {
-            .features-grid, .steps { grid-template-columns: 1fr; }
-            h2 { font-size: 2em; }
+            .features-grid, .steps, .support-section { grid-template-columns: 1fr; flex-direction: column; text-align: center; }
+            .support-img { width: 100%; }
         }
     </style>
 </head>
@@ -64,7 +61,7 @@
 
     <header class="site-header">
         <div class="logo-wrap">
-            <img src="map.jpg.jpeg" alt="Logo" class="logo-img">
+            <img src="map.jpg.jpeg" alt="USA Map" class="logo-img">
             <div class="logo-text-area">
                 <h1 class="logo-main">1LANDBUYERUSA.COM</h1>
                 <p class="logo-sub">Direct Cash Land Buyers</p>
@@ -75,7 +72,9 @@
 
     <div class="container">
         <h2>The Easiest Way To <span class="highlight">Sell Your Land</span> Fast</h2>
-        <p class="intro-subtext">We offer a quick and easy land selling experience. Guaranteeing the easiest process ever!</p>
+        <p class="intro-subtext">Quick & Easy Land Selling Experience. Guaranteeing the easiest process ever!</p>
+
+        <img src="lot.png.png" alt="Land Lot" class="property-img">
 
         <div class="features-grid">
             <div class="feature-box">
@@ -96,26 +95,26 @@
             <h2>Our Simple 3-Step Process</h2>
             <div class="steps">
                 <div class="step">
-                    <span class="step-num">01</span>
-                    <div class="step-content">
-                        <h4>Tell Us About Your Land</h4>
-                        <p>Share key details like location and size. We'll discuss your goals for selling and any specific needs you have.</p>
-                    </div>
+                    <h4>1. Tell Us About Your Land</h4>
+                    <p>Share key details like location and size. We'll discuss your goals for selling and any specific needs you have.</p>
                 </div>
                 <div class="step">
-                    <span class="step-num">02</span>
-                    <div class="step-content">
-                        <h4>Receive A Cash Offer</h4>
-                        <p>Within 24 hours, we'll present a no-obligation, all-cash offer tailored to reflect current market value.</p>
-                    </div>
+                    <h4>2. Receive A Cash Offer</h4>
+                    <p>Within 24 hours, we'll present a no-obligation, all-cash offer tailored to reflect current market value.</p>
                 </div>
                 <div class="step">
-                    <span class="step-num">03</span>
-                    <div class="step-content">
-                        <h4>Accept & Get Paid</h4>
-                        <p>We handle all paperwork and closing costs. No hidden fees or commissions—just your full payment at closing.</p>
-                    </div>
+                    <h4>3. Accept & Get Paid</h4>
+                    <p>We handle all paperwork and closing costs. No hidden fees or commissions—just your full payment at closing.</p>
                 </div>
+            </div>
+        </div>
+
+        <div class="support-section">
+            <img src="call.png.png" alt="Support Specialist" class="support-img">
+            <div class="support-text">
+                <h3>Talk to our Support Specialist</h3>
+                <p>Our team is available 24/7 to guide you through the process and answer your questions.</p>
+                <a href="tel:9046829292" class="phone-link">904-682-9292</a>
             </div>
         </div>
 
@@ -131,42 +130,20 @@
             </tbody>
         </table>
 
-        <div class="support-box">
-            <h3>Need to speak with us first?</h3>
-            <p>Our specialists are available 24/7 to answer your questions.</p>
-            <a href="tel:9046829292" class="phone-big">904-682-9292</a>
-        </div>
-
         <div class="bottom-form-area" id="offer-form">
             <h3 style="text-align: center; color: #1e115e; font-size: 2em; margin-top: 0;">Get Your Guaranteed Cash Offer</h3>
-            <p style="text-align: center; margin-bottom: 30px;">Fill out the form below to start your land evaluation.</p>
-            
             <form action="https://formsubmit.co/jonhog62@gmail.com" method="POST">
                 <input type="hidden" name="_captcha" value="false">
-                <div class="form-group">
-                    <label>Land Address / County & State</label>
-                    <input type="text" name="Property Address" required>
-                </div>
-                <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" name="Full Name" required>
-                </div>
-                <div class="form-group">
-                    <label>Email Address</label>
-                    <input type="email" name="Email" required>
-                </div>
-                <div class="form-group">
-                    <label>Phone Number</label>
-                    <input type="tel" name="Phone" required>
-                </div>
-
+                <div class="form-group"><label>Land Address / County & State</label><input type="text" name="Property Address" required></div>
+                <div class="form-group"><label>Full Name</label><input type="text" name="Full Name" required></div>
+                <div class="form-group"><label>Email Address</label><input type="email" name="Email" required></div>
+                <div class="form-group"><label>Phone Number</label><input type="tel" name="Phone" required></div>
                 <div class="sms-policy-box">
                     <label style="display: flex; align-items: flex-start; cursor: pointer;">
                         <input type="checkbox" name="SMS Consent" style="width: auto; margin-right: 12px; margin-top: 4px;" required>
-                        <span>I consent to receive SMS messages from <strong>Online4com LLC</strong> regarding my offer. Msg & data rates may apply. Reply STOP to opt-out. See <a href="privacy-policy.html">Privacy Policy</a>.</span>
+                        <span>I consent to receive SMS messages from Online4com LLC regarding my offer. Msg & data rates may apply. Reply STOP to opt-out. See <a href="privacy-policy.html">Privacy Policy</a>.</span>
                     </label>
                 </div>
-
                 <button type="submit" class="cta-orange" style="width:100%; margin-top: 25px; padding: 22px; font-size: 1.2em;">Get My Land Offer Now</button>
             </form>
         </div>
