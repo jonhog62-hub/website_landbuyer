@@ -17,18 +17,36 @@
         .property-img { width: 100%; border-radius: 8px; margin-bottom: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         h2 { color: #1e115e; font-size: 2.5em; text-align: center; margin-bottom: 10px; line-height: 1.2; }
         .highlight { color: #ff8c00; }
-        
+        .intro-subtext { text-align: center; font-size: 1.3em; color: #555; margin-bottom: 40px; font-weight: bold; }
+
+        .features-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 25px; margin: 50px 0; }
+        .feature-box { background: #fdfdfd; padding: 30px; border: 1px solid #eee; border-top: 5px solid #ff8c00; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
+        .feature-box h3 { color: #1e115e; font-size: 1.3em; margin-top: 0; }
+
+        .how-it-works { background: #1e115e; color: white; padding: 50px 30px; border-radius: 12px; margin: 60px 0; text-align: center; }
+        .how-it-works h2 { color: white; margin-bottom: 40px; }
+        .steps { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; text-align: left; }
+        .step h4 { color: #ff8c00; font-size: 1.4em; margin-bottom: 10px; }
+
+        .support-section { display: flex; align-items: center; background: #f9f9f9; padding: 35px; border-radius: 8px; margin: 40px 0; gap: 30px; border: 1px solid #ddd; }
+        .support-img { width: 300px; height: auto; border-radius: 8px; border: 3px solid #ff8c00; }
+        .phone-link { font-size: 1.8em; color: #1e115e; text-decoration: none; font-weight: bold; display: block; margin: 10px 0; }
+
         .bottom-form-area { background: #f9f9f9; padding: 45px; border-radius: 8px; border-bottom: 10px solid #ff8c00; margin-top: 60px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         .form-group { margin-bottom: 20px; }
         label { display: block; font-weight: bold; margin-bottom: 8px; }
         input[type="text"], input[type="email"], input[type="tel"] { width: 100%; padding: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; box-sizing: border-box; }
         
-        /* SMS Box Styling */
-        .sms-policy-box { background: #f0f0f0; padding: 20px; border-radius: 6px; font-size: 13px; margin-top: 20px; color: #444; border: 1px solid #ddd; }
+        .sms-policy-box { background: #f0f0f0; padding: 20px; border-radius: 6px; font-size: 13px; margin-top: 20px; color: #444; border: 1px solid #ddd; line-height: 1.4; }
         .sms-policy-box a { color: #1e115e; text-decoration: underline; }
         
         footer { text-align: center; padding: 60px 20px; background: #f4f4f4; border-top: 1px solid #ddd; }
         footer a { color: #1e115e; text-decoration: none; margin: 0 15px; font-weight: bold; }
+
+        @media (max-width: 768px) {
+            .features-grid, .steps, .support-section { grid-template-columns: 1fr; flex-direction: column; text-align: center; }
+            .support-img { width: 100%; }
+        }
     </style>
 </head>
 <body>
@@ -46,14 +64,56 @@
 
     <div class="container">
         <h2>The Easiest Way To <span class="highlight">Sell Your Land</span> Fast</h2>
+        <p class="intro-subtext">Quick & Easy Land Selling Experience. Guaranteeing the easiest process ever!</p>
+
         <img src="lot.png.png" alt="Land Lot" class="property-img">
+
+        <div class="features-grid">
+            <div class="feature-box">
+                <h3>Fair Offer Within 24 Hours</h3>
+                <p>We'll provide you with a 100% guaranteed cash offer for your land—no gimmicks or surprises.</p>
+            </div>
+            <div class="feature-box">
+                <h3>You Pick The Closing Date</h3>
+                <p>We pay in cash, so there's no need for banks. You choose the date that works for you.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Sell On Your Terms</h3>
+                <p>Enjoy a hassle-free sale without the typical disruptions or public showings.</p>
+            </div>
+        </div>
+
+        <div class="how-it-works">
+            <h2>Our Simple 3-Step Process</h2>
+            <div class="steps">
+                <div class="step">
+                    <h4>1. Tell Us About Your Land</h4>
+                    <p>Share details like location and size. We'll discuss your goals for selling.</p>
+                </div>
+                <div class="step">
+                    <h4>2. Receive A Cash Offer</h4>
+                    <p>Within 24 hours, we'll present a no-obligation, all-cash offer based on market value.</p>
+                </div>
+                <div class="step">
+                    <h4>3. Accept & Get Paid</h4>
+                    <p>We handle all paperwork and closing costs. No hidden fees or commissions.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="support-section">
+            <img src="call.png.png" alt="Support Specialist" class="support-img">
+            <div class="support-text">
+                <h3>Talk to our Support Specialist</h3>
+                <p>Our team is available 24/7 to guide you through the process.</p>
+                <a href="tel:9046829292" class="phone-link">904-682-9292</a>
+            </div>
+        </div>
 
         <div class="bottom-form-area" id="offer-form">
             <h3 style="text-align: center; color: #1e115e; font-size: 2em; margin-top: 0;">Get Your Guaranteed Cash Offer</h3>
-            
             <form action="https://formsubmit.co/jonhog62@gmail.com" method="POST">
                 <input type="hidden" name="_captcha" value="false">
-                
                 <div class="form-group"><label>Land Address / County & State</label><input type="text" name="Property Address" required></div>
                 <div class="form-group"><label>Full Name</label><input type="text" name="Full Name" required></div>
                 <div class="form-group"><label>Email Address</label><input type="email" name="Email" required></div>
