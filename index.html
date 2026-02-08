@@ -6,8 +6,6 @@
     <title>1LANDBUYERUSA.COM | Sell Your Land Fast - 100% Cash Offer</title>
     <style>
         body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; background-color: #ffffff; }
-        
-        /* Header */
         .site-header { padding: 20px; border-bottom: 1px solid #eee; background: white; }
         .logo-wrap { display: flex; align-items: center; justify-content: center; gap: 25px; flex-wrap: wrap; max-width: 950px; margin: 0 auto; }
         .logo-img { height: 65px; width: auto; } 
@@ -17,71 +15,48 @@
         .cta-orange { background-color: #ff8c00; color: white; border: none; padding: 12px 22px; font-size: 0.85em; font-weight: bold; border-radius: 5px; cursor: pointer; text-transform: uppercase; transition: 0.3s; }
         .cta-orange:hover { background-color: #e67e00; transform: translateY(-2px); }
 
-        .container { max-width: 850px; margin: 0 auto; padding: 40px 20px; }
-        .property-img { width: 100%; border-radius: 8px; margin-bottom: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
         
-        h2 { color: #1e115e; font-size: 2.2em; margin-top: 0; line-height: 1.2; text-align: center; }
+        h2 { color: #1e115e; font-size: 2.5em; text-align: center; margin-bottom: 10px; line-height: 1.2; }
         .highlight { color: #ff8c00; }
+        .intro-subtext { text-align: center; font-size: 1.3em; color: #555; margin-bottom: 40px; }
 
-        .paperwork-box { 
-            border: 2px dashed #1e115e; 
-            padding: 25px; 
-            text-align: center; 
-            margin: 35px 0; 
-            border-radius: 8px;
-            background-color: #f8f9ff;
-        }
+        /* Text-baserad Benefits Grid */
+        .features-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 25px; margin: 50px 0; }
+        .feature-box { background: #fdfdfd; padding: 30px; border: 1px solid #eee; border-top: 5px solid #ff8c00; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .feature-box h3 { color: #1e115e; font-size: 1.3em; margin-top: 0; }
+        .feature-box p { font-size: 0.95em; color: #666; }
 
-        .benefits-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
-        .benefit-item { background: #fdfdfd; padding: 18px; border-left: 5px solid #ff8c00; font-size: 1em; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        /* How it works - Text focus */
+        .how-it-works { background: #1e115e; color: white; padding: 50px 30px; border-radius: 12px; margin: 60px 0; }
+        .how-it-works h2 { color: white; margin-bottom: 40px; }
+        .steps { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; }
+        .step { position: relative; }
+        .step-num { font-size: 3em; font-weight: bold; color: rgba(255, 140, 0, 0.3); position: absolute; top: -20px; left: 0; }
+        .step-content { position: relative; z-index: 1; }
+        .step h4 { color: #ff8c00; font-size: 1.4em; margin-bottom: 10px; }
+        .step p { font-size: 0.95em; line-height: 1.5; }
 
-        .support-section { 
-            display: flex; 
-            align-items: center; 
-            background: #1e115e; 
-            color: white; 
-            padding: 35px; 
-            border-radius: 8px; 
-            margin: 40px 0; 
-            gap: 30px; 
-        }
-        .support-img { 
-            width: 300px; 
-            height: auto; 
-            border-radius: 8px; 
-            border: 3px solid #ff8c00; 
-        }
-        .support-text h4 { margin: 0 0 5px 0; color: #ff8c00; font-size: 1.6em; }
-        .phone-link { font-size: 1.8em; color: #ffffff; text-decoration: none; font-weight: bold; display: block; margin: 10px 0; }
-        .phone-link:hover { color: #ff8c00; }
-
-        .comparison-table { width: 100%; border-collapse: collapse; margin: 40px 0; font-size: 1em; }
-        .comparison-table th { background: #1e115e; color: white; padding: 15px; text-align: left; }
-        .comparison-table td { padding: 15px; border-bottom: 1px solid #eee; }
+        .comparison-table { width: 100%; border-collapse: collapse; margin: 50px 0; border: 1px solid #eee; }
+        .comparison-table th { background: #f8f9ff; color: #1e115e; padding: 20px; text-align: left; border-bottom: 2px solid #1e115e; }
+        .comparison-table td { padding: 18px; border-bottom: 1px solid #eee; }
         .our-way { background-color: #f0fff4; font-weight: bold; color: #2d6a4f; }
 
-        .bottom-form-area { background: #f9f9f9; padding: 40px; border-radius: 8px; border: 2px solid #ff8c00; margin-top: 60px; }
+        .support-box { text-align: center; padding: 40px; background: #fff8f0; border-radius: 8px; border: 1px solid #ff8c00; margin: 40px 0; }
+        .phone-big { font-size: 2.2em; color: #1e115e; text-decoration: none; font-weight: bold; display: block; margin: 15px 0; }
+
+        .bottom-form-area { background: #f9f9f9; padding: 45px; border-radius: 8px; border-bottom: 10px solid #ff8c00; margin-top: 60px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         .form-group { margin-bottom: 20px; }
-        label { display: block; font-weight: bold; margin-bottom: 8px; font-size: 1em; }
-        input[type="text"], input[type="email"], input[type="tel"] { width: 100%; padding: 15px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 1.1em; }
+        label { display: block; font-weight: bold; margin-bottom: 8px; }
+        input { width: 100%; padding: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; }
+        .sms-policy-box { background: #eee; padding: 15px; border-radius: 4px; font-size: 13px; margin-top: 20px; color: #444; }
         
-        .sms-policy-box { 
-            background: #eee; 
-            padding: 15px; 
-            border-radius: 4px; 
-            font-size: 13px; 
-            margin-top: 20px; 
-            line-height: 1.5; 
-            color: #444;
-        }
-        
-        footer { text-align: center; padding: 50px 20px; background: #f4f4f4; border-top: 1px solid #ddd; margin-top: 60px; }
-        footer a { color: #1e115e; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 0.95em; }
+        footer { text-align: center; padding: 60px 20px; background: #f4f4f4; border-top: 1px solid #ddd; }
+        footer a { color: #1e115e; text-decoration: none; margin: 0 15px; font-weight: bold; }
 
         @media (max-width: 768px) {
-            .benefits-grid { grid-template-columns: 1fr; }
-            .support-section { flex-direction: column; text-align: center; }
-            .support-img { width: 100%; max-width: 350px; }
+            .features-grid, .steps { grid-template-columns: 1fr; }
+            h2 { font-size: 2em; }
         }
     </style>
 </head>
@@ -89,72 +64,92 @@
 
     <header class="site-header">
         <div class="logo-wrap">
-            <img src="map.jpg.jpeg" alt="USA Map" class="logo-img">
+            <img src="map.jpg.jpeg" alt="Logo" class="logo-img">
             <div class="logo-text-area">
                 <h1 class="logo-main">1LANDBUYERUSA.COM</h1>
-                <p class="logo-sub">Sell Your Land Fast — All Cash</p>
+                <p class="logo-sub">Direct Cash Land Buyers</p>
             </div>
-            <button class="cta-orange" onclick="document.getElementById('offer-form').scrollIntoView({behavior: 'smooth'});">Get Cash Offer</button>
+            <button class="cta-orange" onclick="document.getElementById('offer-form').scrollIntoView({behavior: 'smooth'});">Get My Offer</button>
         </div>
     </header>
 
     <div class="container">
-        <h2>Accept Your Offer & Get Your <span class="highlight">Full Amount</span> on the Closing Date of Your Choice!</h2>
-        
-        <img src="lot.png.png" alt="Land Lot" class="property-img">
+        <h2>The Easiest Way To <span class="highlight">Sell Your Land</span> Fast</h2>
+        <p class="intro-subtext">We offer a quick and easy land selling experience. Guaranteeing the easiest process ever!</p>
 
-        <div class="paperwork-box">
-            <p style="margin:0; font-weight: bold; font-size: 1.2em; color: #1e115e;">
-                We handle all the paperwork and cover the closing costs. There are no hidden fees or commissions, ensuring you get exactly what was offered at closing.
-            </p>
+        <div class="features-grid">
+            <div class="feature-box">
+                <h3>Fair Offer Within 24 Hours</h3>
+                <p>We'll provide you with a 100% guaranteed cash offer for your land—no gimmicks or surprises. What we offer is exactly what you'll receive at closing.</p>
+            </div>
+            <div class="feature-box">
+                <h3>You Pick The Closing Date</h3>
+                <p>We pay in cash, so there's no need for banks or lengthy approvals. You choose the closing date that works best for your schedule.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Sell On Your Terms</h3>
+                <p>Enjoy a hassle-free sale without the typical disruptions, showings, or having your private details showcased online to the public.</p>
+            </div>
         </div>
 
-        <p style="font-size: 1.1em; text-align: center; margin-bottom: 30px;">Selling land traditionally can take months and cost thousands in commissions. We offer a faster, simpler way to get cash for your property without the headache.</p>
-
-        <div class="benefits-grid">
-            <div class="benefit-item"><strong>Fair Cash Offer:</strong> We evaluate your land based on market data to provide a competitive offer within 24 hours.</div>
-            <div class="benefit-item"><strong>No Commissions:</strong> Since we are direct buyers, you don't pay any agent fees. You keep 100% of the offer price.</div>
-            <div class="benefit-item"><strong>We Pay Closing Costs:</strong> Title fees, escrow, and recording fees are all on us. No out-of-pocket costs for you.</div>
-            <div class="benefit-item"><strong>Sell "As-Is":</strong> No need to clear the land or pay for expensive surveys. We buy it exactly as it sits today.</div>
-        </div>
-
-        <div class="support-section">
-            <img src="call.png.png" alt="Support Specialist" class="support-img">
-            <div class="support-text">
-                <h4>Talk to our Support Specialist</h4>
-                <a href="tel:9046829292" class="phone-link">904-682-9292</a>
-                <p>Our team is available 24/7 to guide you through the process and collect your land details for an immediate evaluation. Give us a call today!</p>
+        <div class="how-it-works">
+            <h2>Our Simple 3-Step Process</h2>
+            <div class="steps">
+                <div class="step">
+                    <span class="step-num">01</span>
+                    <div class="step-content">
+                        <h4>Tell Us About Your Land</h4>
+                        <p>Share key details like location and size. We'll discuss your goals for selling and any specific needs you have.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-num">02</span>
+                    <div class="step-content">
+                        <h4>Receive A Cash Offer</h4>
+                        <p>Within 24 hours, we'll present a no-obligation, all-cash offer tailored to reflect current market value.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-num">03</span>
+                    <div class="step-content">
+                        <h4>Accept & Get Paid</h4>
+                        <p>We handle all paperwork and closing costs. No hidden fees or commissions—just your full payment at closing.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
         <table class="comparison-table">
             <thead>
-                <tr><th>Feature</th><th>1LandBuyerUSA</th><th>Traditional Sale</th></tr>
+                <tr><th>Benefit</th><th>1LandBuyerUSA</th><th>Traditional Sale</th></tr>
             </thead>
             <tbody>
-                <tr><td>Closing Costs</td><td class="our-way">We pay 100%</td><td>You pay 2-5%</td></tr>
+                <tr><td>Closing Costs</td><td class="our-way">We Pay 100%</td><td>You Pay 2-5%</td></tr>
                 <tr><td>Agent Commissions</td><td class="our-way">0% (None)</td><td>6% - 10%</td></tr>
-                <tr><td>Closing Speed</td><td class="our-way">7-14 Days</td><td>6-12 Months</td></tr>
-                <tr><td>Repairs/Cleaning</td><td class="our-way">None Required</td><td>Often Required</td></tr>
-                <tr><td>Paperwork</td><td class="our-way">We handle everything</td><td>You/Agent handle</td></tr>
+                <tr><td>Public Showings</td><td class="our-way">None</td><td>Constant Disruptions</td></tr>
+                <tr><td>Paperwork</td><td class="our-way">We Handle Everything</td><td>You & Your Agent</td></tr>
             </tbody>
         </table>
 
+        <div class="support-box">
+            <h3>Need to speak with us first?</h3>
+            <p>Our specialists are available 24/7 to answer your questions.</p>
+            <a href="tel:9046829292" class="phone-big">904-682-9292</a>
+        </div>
+
         <div class="bottom-form-area" id="offer-form">
-            <h3 style="margin-top:0; color: #1e115e; font-size: 2em; text-align: center;">Get Your Cash Offer Today</h3>
-            <p style="text-align: center; margin-bottom: 30px;">Enter your property details below and our team will start your evaluation immediately.</p>
+            <h3 style="text-align: center; color: #1e115e; font-size: 2em; margin-top: 0;">Get Your Guaranteed Cash Offer</h3>
+            <p style="text-align: center; margin-bottom: 30px;">Fill out the form below to start your land evaluation.</p>
             
             <form action="https://formsubmit.co/jonhog62@gmail.com" method="POST">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://1landbuyerusa.com">
-
                 <div class="form-group">
                     <label>Land Address / County & State</label>
-                    <input type="text" name="Property Address" placeholder="Street or County, State" required>
+                    <input type="text" name="Property Address" required>
                 </div>
                 <div class="form-group">
                     <label>Full Name</label>
-                    <input type="text" name="Seller Name" required>
+                    <input type="text" name="Full Name" required>
                 </div>
                 <div class="form-group">
                     <label>Email Address</label>
@@ -162,15 +157,13 @@
                 </div>
                 <div class="form-group">
                     <label>Phone Number</label>
-                    <input type="tel" name="Phone" placeholder="904-xxx-xxxx" required>
+                    <input type="tel" name="Phone" required>
                 </div>
 
                 <div class="sms-policy-box">
                     <label style="display: flex; align-items: flex-start; cursor: pointer;">
-                        <input type="checkbox" name="SMS Consent" style="margin-top: 5px; margin-right: 12px; width: auto;" required>
-                        <span>
-                            By providing your phone number, you consent to receive marketing and non-marketing text messages from <strong>Online4com LLC</strong> regarding your property offer. Consent is not a condition of purchase. Msg & data rates may apply. Msg frequency varies. Reply <strong>STOP</strong> to opt-out, <strong>HELP</strong> for help. See our <a href="privacy-policy.html">Privacy Policy</a>.
-                        </span>
+                        <input type="checkbox" name="SMS Consent" style="width: auto; margin-right: 12px; margin-top: 4px;" required>
+                        <span>I consent to receive SMS messages from <strong>Online4com LLC</strong> regarding my offer. Msg & data rates may apply. Reply STOP to opt-out. See <a href="privacy-policy.html">Privacy Policy</a>.</span>
                     </label>
                 </div>
 
